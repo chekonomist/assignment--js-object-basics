@@ -20,7 +20,38 @@
 */
 
 
+function makeNamesObject(nameOne,nameTwo,nameThree){
+  var fullNamesObj = {}
+  var lineOne = nameOne.split(" ")
+  var lineTwo = nameTwo.split(" ")
+  var lineThree = nameThree.split(" ")
+  var firstNameOne = lineOne[0]
+  var lastNameOne = lineOne[1]
+  var firstNameTwo = lineTwo[0]
+  var lastNameTwo = lineTwo[1]
+  var firstNameThree = lineThree[0]
+  var lastNameThree = lineThree[1]
 
+  fullNamesObj[firstNameOne] = lastNameOne
+  fullNamesObj[firstNameTwo] = lastNameTwo
+  fullNamesObj[firstNameThree] = lastNameThree
+
+  // console.log(lineOne)
+  // console.log(lineTwo)
+  // console.log(lineThree)
+  // console.log("----")
+  // for (var i = 0; i < [...arguments].length ; i++){
+  //   var nameArr = arguments[i].split(" ")
+  //   var firstName = nameArr[0]
+  //   var lastName = nameArr[1]
+  //   fullNamesObj[firstName] = lastName
+
+  console.log(fullNamesObj)
+  console.log("-----")
+  return fullNamesObj
+  }
+
+  
 
 
 

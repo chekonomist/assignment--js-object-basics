@@ -12,11 +12,45 @@
  * + The 4th parameter should be a string value for the car license plate.
  *
  * you will need to do some type checking on the inputs with the `typeof`
- * perator (see assertions 3 - 4) to make sure that the function is
+ * operator (see assertions 3 - 4) to make sure that the function is
  * used properly. if the user did not provide the correct the correct inputs,
  * to the function, the function should return a string.
  *  ( see GROUP2 - GROUP4 console.assert() )
 **/
+
+function createCarRecord(someMake,someModel,someYear,somePlate){
+  var carRecord = {}
+  var errorMessage = ""
+
+  if ( someMake === undefined || someModel === undefined || someYear === undefined || somePlate === undefined ) {
+    errorMessage = 'new record must have make, model, year, and license values'
+  }
+
+  else if ( typeof(someMake) !== "string" && typeof(someModel) !== "string" && typeof(somePlate) !== "string" ) {
+    errorMessage = '1st, 2nd, and 4th arguments must be String'
+    console.log(errorMessage)
+
+  }
+
+  else if ( typeof(someYear) !== "number" ) {
+    errorMessage = '3rd argument must be a Number'
+  }
+
+  carRecord = {
+    make : someMake,
+    model : someModel,
+    year : someYear,
+    license : somePlate
+    }
+
+  console.log(carRecord)
+  console.log(errorMessage)
+  console.log("-----")
+  return carRecord
+
+  }
+
+
 
 
 

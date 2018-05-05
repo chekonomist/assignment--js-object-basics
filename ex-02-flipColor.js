@@ -8,7 +8,29 @@
  * vice-versa.
 */
 
-
+function flipColor(someObject){
+  // var correctColorObj = {someObject}
+  if (someObject.color === "blue") {
+    someObject.color = "red"
+  }
+  else if (someObject.color === "red") {
+    someObject.color = "blue"
+  }
+  //
+  // switch (someObj.color){
+  //   case "red":
+  //     someObj.color = "blue"
+  //     break
+  //   case "blue":
+  //     someObj.color = "red"
+  //     break
+  //   default:
+  //     someObj.color = someObj.color
+  // }
+  // 
+  console.log(someObject)
+  return someObject
+}
 
 
 
