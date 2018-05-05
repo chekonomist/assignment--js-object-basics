@@ -20,20 +20,17 @@
 
 function createCarRecord(someMake,someModel,someYear,somePlate){
   var carRecord = {}
-  var errorMessage = ""
 
   if ( someMake === undefined || someModel === undefined || someYear === undefined || somePlate === undefined ) {
-    errorMessage = 'new record must have make, model, year, and license values'
+    return 'new record must have make, model, year, and license values'
   }
 
-  else if ( typeof(someMake) !== "string" && typeof(someModel) !== "string" && typeof(somePlate) !== "string" ) {
-    errorMessage = '1st, 2nd, and 4th arguments must be String'
-    console.log(errorMessage)
-
+  else if ( typeof(someMake) !== "string" || typeof(someModel) !== "string" || typeof(somePlate) !== "string" ) {
+    return '1st, 2nd, and 4th arguments must be String'
   }
 
   else if ( typeof(someYear) !== "number" ) {
-    errorMessage = '3rd argument must be a Number'
+    return '3rd argument must be a Number'
   }
 
   carRecord = {
@@ -44,7 +41,6 @@ function createCarRecord(someMake,someModel,someYear,somePlate){
     }
 
   console.log(carRecord)
-  console.log(errorMessage)
   console.log("-----")
   return carRecord
 
